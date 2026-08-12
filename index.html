@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Golden Ticket | arx.cr2</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Simple Icons CDN for platform logos -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   
   <style>
@@ -46,7 +44,9 @@
       <!-- 1. Spotify -->
       <div class="flex items-center justify-between py-3 px-2">
         <div class="flex items-center space-x-3">
-          <i class="si si-spotify text-2xl text-[#1DB954]"></i>
+          <svg class="w-6 h-6 text-[#1DB954] fill-current" viewBox="0 0 24 24">
+            <path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141 C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+          </svg>
           <span class="font-bold text-gray-800 text-sm">Spotify</span>
         </div>
         <a href="https://open.spotify.com/artist/59jRteSTpHDsv3rgIzlGBD?si=GcbQbWTUTL2_8zx5gZTWtg" target="_blank" class="bg-slate-200/80 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
@@ -57,7 +57,9 @@
       <!-- 2. Apple Music -->
       <div class="flex items-center justify-between py-3 px-2">
         <div class="flex items-center space-x-3">
-          <i class="si si-apple-music text-2xl text-[#FA243C]"></i>
+          <svg class="w-6 h-6 text-[#FA243C] fill-current" viewBox="0 0 24 24">
+            <path d="M12.152 6.896c-.132 0-.285.006-.441.015-1.092.059-2.126.54-2.883 1.303-.865.869-1.328 2.01-1.305 3.213.023 1.203.528 2.316 1.42 3.131.815.748 1.865 1.139 2.957 1.103 1.092-.036 2.115-.49 2.883-1.278.865-.87 1.328-2.011 1.305-3.214-.023-1.202-.528-2.315-1.42-3.131-.776-.712-1.761-1.112-2.516-1.147zm.287 7.228c-.562.019-1.103-.18-1.523-.564-.46-.421-.72-1.0-.732-1.621-.012-.62.227-1.21.673-1.657.397-.397.93-.647 1.492-.677.562-.019 1.103.18 1.523.564.46.421.72 1.001.732 1.621.012.62-.227 1.21-.673 1.657-.397.397-.93.647-1.492.677zm8.381-12.871l-10 1.942v12.247c-.571-.247-1.222-.382-1.905-.357-2.378.083-4.225 2.029-4.126 4.348.099 2.32 2.107 4.135 4.485 4.052 2.274-.08 4.088-1.888 4.126-4.123v-11.231l7-1.359v8.468c-.571-.247-1.222-.382-1.905-.357-2.378.083-4.225 2.029-4.126 4.348.099 2.32 2.107 4.135 4.485 4.052 2.274-.08 4.088-1.888 4.126-4.123v-17.367z"/>
+          </svg>
           <span class="font-bold text-gray-800 text-sm">Apple Music</span>
         </div>
         <a href="https://music.apple.com/us/song/golden-ticket-feat-snowstorm/6800087493" target="_blank" class="bg-slate-200/80 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
@@ -68,7 +70,9 @@
       <!-- 3. Amazon Music -->
       <div class="flex items-center justify-between py-3 px-2">
         <div class="flex items-center space-x-3">
-          <i class="si si-amazonmusic text-2xl text-[#00A8E1]"></i>
+          <svg class="w-6 h-6 text-[#00A8E1] fill-current" viewBox="0 0 24 24">
+            <path d="M13.25 10.378c0-.987-.414-1.424-1.328-1.424-.872 0-1.448.483-1.448 1.424 0 .919.576 1.402 1.448 1.402.914 0 1.328-.483 1.328-1.402zm.046 5.836h1.93v-1.287c-.643.712-1.424 1.103-2.39 1.103-1.677 0-2.827-1.126-2.827-2.941 0-1.884 1.195-2.941 2.827-2.941.965 0 1.747.391 2.39 1.103V9.895c0-1.747-.942-2.528-2.689-2.528-1.103 0-2.137.345-2.987.988l-.758-1.448c1.103-.804 2.528-1.241 4.045-1.241 2.896 0 4.344 1.425 4.344 4.183v6.365h-1.885zm-9.008 1.402c6.25 1.586 11.237 0 13.926-1.517.207-.115.46.069.345.322-.552 1.218-2.206 2.62-5.124 3.125-3.309.575-6.756-.046-9.605-1.586-.253-.138-.069-.437.207-.344zm14.822.391c.207-.161.414.046.299.253-.552.896-1.287 1.631-2.183 2.183-.23.138-.414-.092-.253-.276.643-.804 1.494-1.425 2.137-2.16z"/>
+          </svg>
           <span class="font-bold text-gray-800 text-sm">Amazon Music</span>
         </div>
         <a href="https://music.amazon.co.uk/tracks/B0HDQR7Y36/?ref=dm_sh_OVTl0P4QtkcNaKVE9l3asJcRE" target="_blank" class="bg-slate-200/80 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
@@ -79,7 +83,9 @@
       <!-- 4. Tidal -->
       <div class="flex items-center justify-between py-3 px-2">
         <div class="flex items-center space-x-3">
-          <i class="si si-tidal text-2xl text-[#000000]"></i>
+          <svg class="w-6 h-6 text-[#000000] fill-current" viewBox="0 0 24 24">
+            <path d="M12.012 3.984l-3.996 4 3.996 4 3.996-4-3.996-4zm-8 7.992l-3.996 4 3.996 4 3.996-4-3.996-4zm8 0l-3.996 4 3.996 4 3.996-4-3.996-4zm8 0l-3.996 4 3.996 4 3.996-4-3.996-4z"/>
+          </svg>
           <span class="font-bold text-gray-800 text-sm">Tidal</span>
         </div>
         <a href="https://tidal.com/track/551026571/u" target="_blank" class="bg-slate-200/80 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
@@ -90,7 +96,9 @@
       <!-- 5. YouTube Music -->
       <div class="flex items-center justify-between py-3 px-2">
         <div class="flex items-center space-x-3">
-          <i class="si si-youtubemusic text-2xl text-[#FF0000]"></i>
+          <svg class="w-6 h-6 text-[#FF0000] fill-current" viewBox="0 0 24 24">
+            <path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm0 19.2c-3.971 0-7.2-3.229-7.2-7.2s3.229-7.2 7.2-7.2 7.2 3.229 7.2 7.2-3.229 7.2-7.2 7.2zm0-11.64c-2.45 0-4.44 1.99-4.44 4.44s1.99 4.44 4.44 4.44 4.44-1.99 4.44-4.44-1.99-4.44-4.44-4.44zm-1.44 6.36v-3.84l3.36 1.92-3.36 1.92z"/>
+          </svg>
           <span class="font-bold text-gray-800 text-sm">YouTube Music</span>
         </div>
         <a href="https://music.youtube.com/watch?v=xZKV-gj8Zs4&si=P7964r8J6f9uA-DL" target="_blank" class="bg-slate-200/80 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
