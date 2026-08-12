@@ -3,44 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Golden Ticket | arx.cr2</title>
+  <title>Golden Ticket | Biscuit</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      /* Icy gradient palette: Deep Indigo -> Glacier Blue -> Ice Cyan -> Frost White */
-      background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0284c7, #38bdf8, #e0f2fe);
+      /* Icy gradient palette: Deep Indigo -> Glacier Blue -> Ice Cyan -> Bright Frost */
+      background: linear-gradient(-45deg, #0284c7, #0f172a, #38bdf8, #1e3a8a, #bae6fd);
       background-size: 400% 400%;
-      animation: iceGradient 12s ease infinite;
+      /* Speed up gradient animation from 12s to 4s */
+      animation: iceGradient 4s ease infinite;
       min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
     }
+
     @keyframes iceGradient {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+
+    /* CSS Snow Animation Overlay */
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.2em;
+      pointer-events: none;
+      animation: fall 7s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10vh) translateX(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(105vh) translateX(50px) rotate(360deg);
+        opacity: 0.2;
+      }
+    }
+
+    /* Staggered Snow Effect Timings */
+    .s1 { left: 10%; animation-duration: 6s; animation-delay: 0s; font-size: 1rem; }
+    .s2 { left: 25%; animation-duration: 8s; animation-delay: 1s; font-size: 1.4rem; }
+    .s3 { left: 40%; animation-duration: 5s; animation-delay: 2s; font-size: 0.8rem; }
+    .s4 { left: 60%; animation-duration: 7s; animation-delay: 0.5s; font-size: 1.2rem; }
+    .s5 { left: 75%; animation-duration: 9s; animation-delay: 3s; font-size: 1rem; }
+    .s6 { left: 90%; animation-duration: 6s; animation-delay: 1.5s; font-size: 1.5rem; }
   </style>
 </head>
 <body class="antialiased flex items-center justify-center p-4">
 
-  <main class="w-full max-w-sm mx-auto my-8">
+  <!-- Background Snow Layer -->
+  <div class="snowflake s1">❄</div>
+  <div class="snowflake s2">❅</div>
+  <div class="snowflake s3">❆</div>
+  <div class="snowflake s4">❄</div>
+  <div class="snowflake s5">❅</div>
+  <div class="snowflake s6">❆</div>
+
+  <main class="w-full max-w-sm mx-auto my-8 relative z-10">
     
     <!-- Cover Art & Title Section -->
     <div class="text-center mb-6">
       <img 
         src="music.png" 
         alt="Golden Ticket Cover Art" 
-        class="w-64 h-64 mx-auto rounded-2xl shadow-2xl object-cover mb-6 border border-white/30 backdrop-blur-md"
+        class="w-64 h-64 mx-auto rounded-2xl shadow-[0_0_25px_rgba(56,189,248,0.5)] object-cover mb-6 border border-cyan-200/40 backdrop-blur-md"
         onerror="this.src='https://placehold.co/500x500/0f172a/white?text=Golden+Ticket'"
       />
-      <h1 class="text-2xl font-extrabold text-white tracking-tight drop-shadow-md">GOLDEN TICKET</h1>
-      <p class="text-cyan-100/90 font-medium text-sm mt-1">arx.cr2 • Out Now</p>
+      <h1 class="text-2xl font-extrabold text-white tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">GOLDEN TICKET</h1>
+      <p class="text-cyan-100 font-semibold text-sm mt-1 drop-shadow-sm">Biscuit • Out Now</p>
     </div>
 
-    <!-- Smart Links Card (Frosted Glass Effect) -->
-    <div class="bg-white/80 backdrop-blur-xl rounded-2xl p-3 shadow-2xl divide-y divide-gray-200/50 border border-white/60">
+    <!-- Smart Links Card (Ice Frosted Glass Effect) -->
+    <div class="bg-white/70 backdrop-blur-2xl rounded-2xl p-3 shadow-[0_10px_30px_rgba(0,0,0,0.3)] divide-y divide-cyan-100 border border-white/80">
       
       <!-- 1. Spotify -->
       <div class="flex items-center justify-between py-3 px-2">
@@ -50,7 +91,7 @@
           </svg>
           <span class="font-bold text-gray-800 text-sm">Spotify</span>
         </div>
-        <a href="https://open.spotify.com/artist/59jRteSTpHDsv3rgIzlGBD?si=GcbQbWTUTL2_8zx5gZTWtg" target="_blank" class="bg-slate-200/90 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
+        <a href="https://open.spotify.com/artist/59jRteSTpHDsv3rgIzlGBD?si=GcbQbWTUTL2_8zx5gZTWtg" target="_blank" class="bg-cyan-50/90 hover:bg-cyan-100 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors shadow-sm">
           Play
         </a>
       </div>
@@ -63,7 +104,7 @@
           </svg>
           <span class="font-bold text-gray-800 text-sm">Apple Music</span>
         </div>
-        <a href="https://music.apple.com/us/song/golden-ticket-feat-snowstorm/6800087493" target="_blank" class="bg-slate-200/90 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
+        <a href="https://music.apple.com/us/song/golden-ticket-feat-snowstorm/6800087493" target="_blank" class="bg-cyan-50/90 hover:bg-cyan-100 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors shadow-sm">
           Play
         </a>
       </div>
@@ -76,7 +117,7 @@
           </svg>
           <span class="font-bold text-gray-800 text-sm">Amazon Music</span>
         </div>
-        <a href="https://music.amazon.co.uk/albums/B0HDRN7HWP?ref=dm_sh_r2FUUim8zXyleArX6TQAvwNmv" target="_blank" class="bg-slate-200/90 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
+        <a href="https://music.amazon.co.uk/albums/B0HDRN7HWP?ref=dm_sh_r2FUUim8zXyleArX6TQAvwNmv" target="_blank" class="bg-cyan-50/90 hover:bg-cyan-100 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors shadow-sm">
           Play
         </a>
       </div>
@@ -89,7 +130,7 @@
           </svg>
           <span class="font-bold text-gray-800 text-sm">Tidal</span>
         </div>
-        <a href="https://tidal.com/track/551026571/u" target="_blank" class="bg-slate-200/90 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
+        <a href="https://tidal.com/track/551026571/u" target="_blank" class="bg-cyan-50/90 hover:bg-cyan-100 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors shadow-sm">
           Play
         </a>
       </div>
@@ -102,7 +143,7 @@
           </svg>
           <span class="font-bold text-gray-800 text-sm">YouTube Music</span>
         </div>
-        <a href="https://music.youtube.com/playlist?list=OLAK5uy_m7NklfSjW71-hae3SYVHQFxYyJ5V2WX90&si=UDEqqDDpm_Mw5Kt2" target="_blank" class="bg-slate-200/90 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_m7NklfSjW71-hae3SYVHQFxYyJ5V2WX90&si=UDEqqDDpm_Mw5Kt2" target="_blank" class="bg-cyan-50/90 hover:bg-cyan-100 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors shadow-sm">
           Play
         </a>
       </div>
