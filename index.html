@@ -10,12 +10,13 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(-45deg, #1e3a8a, #0ea5e9, #10b981, #f59e0b, #7c3aed);
+      /* Icy gradient palette: Deep Indigo -> Glacier Blue -> Ice Cyan -> Frost White */
+      background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0284c7, #38bdf8, #e0f2fe);
       background-size: 400% 400%;
-      animation: gradient 12s ease infinite;
+      animation: iceGradient 12s ease infinite;
       min-height: 100vh;
     }
-    @keyframes gradient {
+    @keyframes iceGradient {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
@@ -29,17 +30,17 @@
     <!-- Cover Art & Title Section -->
     <div class="text-center mb-6">
       <img 
-        src="goldenticket-cover.jpg" 
+        src="music.png" 
         alt="Golden Ticket Cover Art" 
-        class="w-64 h-64 mx-auto rounded-2xl shadow-2xl object-cover mb-6 border border-white/20"
-        onerror="this.src='https://placehold.co/500x500/1e293b/white?text=Golden+Ticket'"
+        class="w-64 h-64 mx-auto rounded-2xl shadow-2xl object-cover mb-6 border border-white/30 backdrop-blur-md"
+        onerror="this.src='https://placehold.co/500x500/0f172a/white?text=Golden+Ticket'"
       />
-      <h1 class="text-2xl font-extrabold text-white tracking-tight">GOLDEN TICKET</h1>
-      <p class="text-white/80 font-medium text-sm mt-1">arx.cr2 • Out Now</p>
+      <h1 class="text-2xl font-extrabold text-white tracking-tight drop-shadow-md">GOLDEN TICKET</h1>
+      <p class="text-cyan-100/90 font-medium text-sm mt-1">arx.cr2 • Out Now</p>
     </div>
 
-    <!-- Smart Links Card -->
-    <div class="bg-white/90 backdrop-blur-xl rounded-2xl p-3 shadow-2xl divide-y divide-gray-200/60 border border-white/40">
+    <!-- Smart Links Card (Frosted Glass Effect) -->
+    <div class="bg-white/80 backdrop-blur-xl rounded-2xl p-3 shadow-2xl divide-y divide-gray-200/50 border border-white/60">
       
       <!-- 1. Spotify -->
       <div class="flex items-center justify-between py-3 px-2">
@@ -49,7 +50,7 @@
           </svg>
           <span class="font-bold text-gray-800 text-sm">Spotify</span>
         </div>
-        <a href="https://open.spotify.com/artist/59jRteSTpHDsv3rgIzlGBD?si=GcbQbWTUTL2_8zx5gZTWtg" target="_blank" class="bg-slate-200/80 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
+        <a href="https://open.spotify.com/artist/59jRteSTpHDsv3rgIzlGBD?si=GcbQbWTUTL2_8zx5gZTWtg" target="_blank" class="bg-slate-200/90 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
           Play
         </a>
       </div>
@@ -62,7 +63,7 @@
           </svg>
           <span class="font-bold text-gray-800 text-sm">Apple Music</span>
         </div>
-        <a href="https://music.apple.com/us/song/golden-ticket-feat-snowstorm/6800087493" target="_blank" class="bg-slate-200/80 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
+        <a href="https://music.apple.com/us/song/golden-ticket-feat-snowstorm/6800087493" target="_blank" class="bg-slate-200/90 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
           Play
         </a>
       </div>
@@ -75,7 +76,7 @@
           </svg>
           <span class="font-bold text-gray-800 text-sm">Amazon Music</span>
         </div>
-        <a href="https://music.amazon.co.uk/tracks/B0HDQR7Y36/?ref=dm_sh_OVTl0P4QtkcNaKVE9l3asJcRE" target="_blank" class="bg-slate-200/80 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
+        <a href="https://music.amazon.co.uk/tracks/B0HDQR7Y36/?ref=dm_sh_OVTl0P4QtkcNaKVE9l3asJcRE" target="_blank" class="bg-slate-200/90 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
           Play
         </a>
       </div>
@@ -88,7 +89,7 @@
           </svg>
           <span class="font-bold text-gray-800 text-sm">Tidal</span>
         </div>
-        <a href="https://tidal.com/track/551026571/u" target="_blank" class="bg-slate-200/80 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
+        <a href="https://tidal.com/track/551026571/u" target="_blank" class="bg-slate-200/90 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
           Play
         </a>
       </div>
@@ -101,7 +102,7 @@
           </svg>
           <span class="font-bold text-gray-800 text-sm">YouTube Music</span>
         </div>
-        <a href="https://music.youtube.com/watch?v=xZKV-gj8Zs4&si=P7964r8J6f9uA-DL" target="_blank" class="bg-slate-200/80 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
+        <a href="https://music.youtube.com/watch?v=xZKV-gj8Zs4&si=P7964r8J6f9uA-DL" target="_blank" class="bg-slate-200/90 hover:bg-slate-300 text-gray-800 font-semibold px-4 py-1.5 rounded-lg text-xs transition-colors">
           Play
         </a>
       </div>
